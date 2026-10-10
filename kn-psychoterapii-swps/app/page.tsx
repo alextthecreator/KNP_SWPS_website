@@ -91,8 +91,9 @@ export default function Home() {
         </div>
         <div className="vision-field field-talk">
           <p>
-            Jest tu miejsce na pytania, rozmowę i wspólne pogłębianie zainteresowania psychoterapią.
+            Chcemy również organizować debaty i dyskusje klubowe wokół szeroko pojętej psychoterapii. Zachęcamy do zgłaszania tematów i własnych prezentacji.
           </p>
+          <div className="discussion-contact">Prześlij pomysł: <a href="mailto:kn.psychoterapii.swps@gmail.com">e-mailem ↗</a>, <a href="https://www.instagram.com/kolo_naukowe_psychoterapii/" target="_blank" rel="noopener">na Instagramie ↗</a> lub <a href="https://www.facebook.com/410657765472409" target="_blank" rel="noopener">na Facebooku ↗</a>.</div>
           <span className="field-flower" aria-hidden="true">
             ✦
           </span>
@@ -150,6 +151,8 @@ export default function Home() {
           </button>
         </div>
       </div>
+      <div className="calendar-layout">
+      <div className="calendar-main">
       <div className="calendar" aria-label="Kalendarz spotkań">
         <div className="weekdays">
           <span>
@@ -222,9 +225,9 @@ export default function Home() {
           <h3 id="agenda-title">
             Pobieramy terminy spotkań…
           </h3>
-          <p id="agenda-text">
+          <div id="agenda-text">
             Wydarzenia z kalendarza Google koła.
-          </p>
+          </div>
         </div>
         <a className="social-text" href="https://www.instagram.com/kolo_naukowe_psychoterapii/" target="_blank" rel="noopener">
           <svg>
@@ -233,6 +236,13 @@ export default function Home() {
           Aktualności na Instagramie
         </a>
       </div>
+      </div>
+      <aside className="month-summary" aria-label="Podsumowanie wydarzeń miesiąca">
+        <h2>W tym miesiącu</h2>
+        <div id="month-events" aria-live="polite"></div>
+      </aside>
+      </div>
+      <div id="event-tooltip" className="event-tooltip" role="tooltip" hidden></div>
       <div id="google-container" hidden>
         <iframe title="Kalendarz Google koła" loading="lazy">
         </iframe>

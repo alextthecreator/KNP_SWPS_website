@@ -20,7 +20,7 @@ export async function GET(request:Request){
   }
   const [y,m]=month.split('-').map(Number);
   const min=new Date(Date.UTC(y,m-1,1)-86400000),max=new Date(Date.UTC(y,m,1)+86400000);
-  const events:Array<{date:string,title:string,time:string,description:string}>=[];
+  const events:Array<{date:string,title:string,time:string,location:string,description:string}>=[];
   const components=calendar.getAllSubcomponents('vevent');
   const masters=components.filter(c=>!c.hasProperty('recurrence-id'));
   const overrides=components.filter(c=>c.hasProperty('recurrence-id'));
@@ -42,7 +42,7 @@ export async function GET(request:Request){
     for(let n=0;n<370;n++){
      const dayKey=day.toISOString().slice(0,10);
      if(dayKey>endKey||(start.isDate&&dayKey===endKey&&dayKey!==key))break;
-     if(dayKey.startsWith(month))events.push({date:dayKey,title:item.summary||'Spotkanie koła',time:start.isDate?'Cały dzień':timeFormat.format(startDate),description:item.location||''});
+     if(dayKey.startsWith(month))events.push({date:dayKey,title:item.summary||'Spotkanie koła',time:start.isDate?'Cały dzień':timeFormat.format(startDate),location:item.location||'',description:item.description||''});
      day=new Date(day.getTime()+86400000);
     }
    };
