@@ -1,6 +1,7 @@
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 import ICAL from 'ical.js';
+import { cleanDescription } from './description';
 const CALENDAR_URL='https://calendar.google.com/calendar/ical/a55ff41cfccf102d5be0d93f51b02a9102eed283453098868a6ce4e3b590c175%40group.calendar.google.com/public/basic.ics';
 const zone='Europe/Warsaw';
 const dateFormat=new Intl.DateTimeFormat('en-CA',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit'});
@@ -42,7 +43,7 @@ export async function GET(request:Request){
     for(let n=0;n<370;n++){
      const dayKey=day.toISOString().slice(0,10);
      if(dayKey>endKey||(start.isDate&&dayKey===endKey&&dayKey!==key))break;
-     if(dayKey.startsWith(month))events.push({date:dayKey,title:item.summary||'Spotkanie koła',time:start.isDate?'Cały dzień':timeFormat.format(startDate),location:item.location||'',description:item.description||''});
+     if(dayKey.startsWith(month))events.push({date:dayKey,title:item.summary||'Spotkanie koła',time:start.isDate?'Cały dzień':timeFormat.format(startDate),location:item.location||'',description:cleanDescription(item.description||'')});
      day=new Date(day.getTime()+86400000);
     }
    };

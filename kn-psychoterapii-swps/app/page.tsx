@@ -217,24 +217,8 @@ export default function Home() {
           </span>
         </button>
       </div>
-      <div className="agenda">
-        <div>
-          <p id="selected-label">
-            Wydarzenia w tym miesiącu
-          </p>
-          <h3 id="agenda-title">
-            Pobieramy terminy spotkań…
-          </h3>
-          <div id="agenda-text">
-            Wydarzenia z kalendarza Google koła.
-          </div>
-        </div>
-        <a className="social-text" href="https://www.instagram.com/kolo_naukowe_psychoterapii/" target="_blank" rel="noopener">
-          <svg>
-            <use href="#instagram-icon" />
-          </svg>
-          Aktualności na Instagramie
-        </a>
+      <div className="agenda" hidden aria-live="polite">
+        <div id="agenda-text"></div>
       </div>
       </div>
       <aside className="month-summary" aria-label="Podsumowanie wydarzeń miesiąca">
