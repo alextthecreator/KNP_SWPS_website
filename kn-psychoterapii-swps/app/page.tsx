@@ -144,10 +144,10 @@ export default function Home() {
             Dzisiaj
           </button>
           <button id="prev" className="arrow" aria-label="Poprzedni miesiąc">
-            ←
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M19 12H5m6-6-6 6 6 6" /></svg>
           </button>
           <button id="next" className="arrow" aria-label="Następny miesiąc">
-            →
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
           </button>
         </div>
       </div>
