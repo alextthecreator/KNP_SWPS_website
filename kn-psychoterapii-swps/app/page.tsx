@@ -210,12 +210,9 @@ export default function Home() {
             Czas lokalny: Warszawa
           </span>
         </p>
-        <button className="text-link" id="google-open">
-          Kalendarz Google
-          <span>
-            ↗
-          </span>
-        </button>
+        <a className="text-link calendar-download" href="/api/calendar/download" download="kn-psychoterapii.ics">
+          Importuj kalendarz do swojego kalendarza <span aria-hidden="true">↓</span>
+        </a>
       </div>
       <div className="agenda" hidden aria-live="polite">
         <div id="agenda-text"></div>
@@ -227,10 +224,7 @@ export default function Home() {
       </aside>
       </div>
       <div id="event-tooltip" className="event-tooltip" role="tooltip" hidden></div>
-      <div id="google-container" hidden>
-        <iframe title="Kalendarz Google koła" loading="lazy">
-        </iframe>
-      </div>
+
     </section>
     <section id="regulamin" className="page" hidden>
       <div className="page-heading rules-heading">
@@ -348,20 +342,7 @@ export default function Home() {
       KN Psychoterapii · Uniwersytet SWPS we Wrocławiu
     </div>
   </footer>
-  <dialog id="google-dialog">
-    <button className="dialog-close" aria-label="Zamknij">
-      ×
-    </button>
-    <h2>
-      Kalendarz Google
-    </h2>
-    <p>
-      Sprawdź informacje o spotkaniach na Instagramie koła.
-    </p>
-    <a className="form-link" href="https://www.instagram.com/kolo_naukowe_psychoterapii/" target="_blank" rel="noopener">
-      Instagram ↗
-    </a>
-  </dialog>
+
     </>
   );
 }

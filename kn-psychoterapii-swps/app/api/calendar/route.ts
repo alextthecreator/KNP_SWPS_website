@@ -2,7 +2,7 @@ export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 import ICAL from 'ical.js';
 import { cleanDescription } from './description';
-const CALENDAR_URL='https://calendar.google.com/calendar/ical/a55ff41cfccf102d5be0d93f51b02a9102eed283453098868a6ce4e3b590c175%40group.calendar.google.com/public/basic.ics';
+import { CALENDAR_URL } from './source';
 const zone='Europe/Warsaw';
 const dateFormat=new Intl.DateTimeFormat('en-CA',{timeZone:zone,year:'numeric',month:'2-digit',day:'2-digit'});
 const timeFormat=new Intl.DateTimeFormat('pl-PL',{timeZone:zone,hour:'2-digit',minute:'2-digit'});

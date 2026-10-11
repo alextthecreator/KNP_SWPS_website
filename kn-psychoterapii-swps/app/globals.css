@@ -14,3 +14,5 @@
 /* Jednakowe ikony i stabilny układ przycisków na telefonie. */
 .month-controls{flex-shrink:0;align-items:center}.month-controls .arrow{display:inline-flex;align-items:center;justify-content:center;padding:0;flex-shrink:0;line-height:1;appearance:none;-webkit-appearance:none}.month-controls .arrow svg{display:block;width:18px;height:18px;flex-shrink:0}
 @media(max-width:600px){.calendar-toolbar{gap:10px;flex-wrap:wrap}.calendar-toolbar h2{flex:1;min-width:140px;max-width:none;font-size:24px}.month-controls{gap:6px}.month-controls .arrow{width:38px;height:38px}.month-controls .outline{height:38px;white-space:nowrap}.month-controls .arrow svg{width:16px;height:16px}}
+
+.calendar-download{max-width:300px;text-align:right;line-height:1.6}.calendar-bottom{gap:16px}@media(max-width:600px){.calendar-download{max-width:220px}}
